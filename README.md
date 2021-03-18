@@ -23,7 +23,7 @@ There are two scripts that need to be executed in the following order:
 1. Clone this repo. `git clone https://github.com/ubccapico/restore-speedgrader-comments.git`
 1. Then cd into the repo. `cd restore-speedgrader-comments`
 1. Run the installation script. `npm install` (If you see `babel-node: command not found`, you've missed this step.)
-1. Generate Canvas API token and copy it to clipboard.
+1. Generate Canvas API tokens from Beta.
 1. Create a `.env` file.
 
 #### downloadSubmission.js
