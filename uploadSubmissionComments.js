@@ -31,14 +31,11 @@ const uploadSubmissionComments = async (courseId, assignmentId) => {
   }))
 }
 
-
-
 const courseId = 12345
 const assignmentId = 12345
 
 uploadSubmissionComments(courseId, assignmentId)
   .then(x => console.log(x))
-
 
 // const getSubmissionIDsWithComments = async (courseId, assignmentId) => {
 //   const assignmentSubmissions = await api.getAssignmentSubmissions(courseId, assignmentId, api.getOptions.submissions.submission_comments)
@@ -46,7 +43,7 @@ uploadSubmissionComments(courseId, assignmentId)
 //   return assignmentSubmissionsWithComments
 // }
 
-// rate limited so deleted the partial comments for (400, 500), and re-executed script to post to avoid duplication
+// rate limited so deleted the partial comments, and re-executed script to post to avoid duplication
 // getSubmissionIDsWithComments(courseId, assignmentId).then(submissionsWithComments => {
 //   return Promise.all(
 //     submissionsWithComments.map(submission => {
