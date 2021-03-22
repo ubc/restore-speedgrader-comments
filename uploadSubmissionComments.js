@@ -31,8 +31,28 @@ const uploadSubmissionComments = async (courseId, assignmentId) => {
   }))
 }
 
+
+
 const courseId = 12345
 const assignmentId = 12345
 
 uploadSubmissionComments(courseId, assignmentId)
   .then(x => console.log(x))
+
+
+// const getSubmissionIDsWithComments = async (courseId, assignmentId) => {
+//   const assignmentSubmissions = await api.getAssignmentSubmissions(courseId, assignmentId, api.getOptions.submissions.submission_comments)
+//   const assignmentSubmissionsWithComments = assignmentSubmissions.filter(x => x.submission_comments.length > 0 && submissions.find(s => s.user_id === x.user_id))
+//   return assignmentSubmissionsWithComments
+// }
+
+// rate limited so deleted the partial comments for (400, 500), and re-executed script to post to avoid duplication
+// getSubmissionIDsWithComments(courseId, assignmentId).then(submissionsWithComments => {
+//   return Promise.all(
+//     submissionsWithComments.map(submission => {
+//       const userId = submission.user_id
+//       const submissionComments = submission.submission_comments
+//         return Promise.all(submissionComments.map(comment => api.deleteSubmissionComment(courseId, assignmentId, userId, comment.id)))
+//     })
+//   )
+// }).then(x => console.log(x))
